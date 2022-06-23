@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "AK. Del",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -2.67, "left": 53.33, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": 32.3, "left": -71.34, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -56.07,
+      "left": 113.49,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -66.14,
+      "left": 381.73,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 208.76,
+      "left": 323.69,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -81.46,
+      "left": -166.45,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pir1:GND", "uno:GND.2", "black", [ "v95.31", "h238.53" ] ],
+    [ "btn1:1.r", "uno:3", "green", [ "v-0.26", "h66.66" ] ],
+    [ "btn1:2.l", "uno:GND.2", "black", [ "h-75.09", "v240.28", "h182.43" ] ],
+    [ "pir1:OUT", "uno:2", "green", [ "v119.29", "h288.33" ] ],
+    [ "pir1:VCC", "uno:5V", "red", [ "v109.62", "h40.09" ] ],
+    [ "led1:A", "uno:11", "blue", [ "v14.6", "h32.11", "v-59.66", "h-237.82" ] ],
+    [ "led1:C", "r1:2", "black", [ "v0" ] ],
+    [ "r1:1", "uno:GND.2", "black", [ "v0.84", "h-99.48" ] ],
+    [ "ldr1:VCC", "uno:5V", "red", [ "h44.53", "v299.38", "h163.25" ] ],
+    [ "ldr1:GND", "uno:GND.2", "black", [ "h34.85", "v275.67", "h178.97" ] ],
+    [ "ldr1:AO", "uno:A2", "green", [ "h21.15", "v264.23", "h249.91" ] ]
+  ]
+}
